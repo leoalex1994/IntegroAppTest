@@ -1,0 +1,28 @@
+.custom-image {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+  }
+  .greeting {
+    z-index: 20;
+    top: 0px;
+    height: 0%;
+    width: 100%;
+    background-color: black;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 50px 50px 0px 50px;
+    text-align: center;
+  }
+  .custom-subtitle {
+    font-size: medium;
+    margin: 20px;
+  }
+  ion-item::part(native) {
+    border-width: 2px;
+    border-radius: 20px;
+  }

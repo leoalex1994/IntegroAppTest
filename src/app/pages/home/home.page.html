@@ -1,0 +1,81 @@
+<ion-header no-border class="bar-header" [translucent]="true" class="grey">
+  <ion-toolbar style="text-align:center ;"  color="primary">
+    <ion-title *ngIf="!showForm"> Bienvenido </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="background-image mb-15 pb-5" [fullscreen]="true">
+  <ion-fab vertical="top" horizontal="end" edge slot="fixed">
+    <ion-fab-button color="secondary">
+      <ion-icon name="menu-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="bottom">
+      <ion-fab-button *ngIf="isAdmin" [routerLink]="'/register'" color="danger">
+        <ion-icon name="person-add-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="closeSession()" color="danger">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <ion-fab (click)="vernitificaciones()" vertical="top" horizontal="first" edge slot="fixed">
+    <ion-badge style="    position: absolute;
+    z-index: 100;"  color="secondary">{{notifyCount}}</ion-badge>
+    <ion-fab-button color="danger">
+      <ion-icon name="notifications-outline">
+      </ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <div class="custom-image">
+    <div class="greeting">
+      <h2 class="title-red" *ngIf="user?.name">Hola {{user.name}}!</h2>
+      <h2 style="color:white !important ;" class="custom-subtitle">Selecciona una aplicación para ingresar:</h2>
+    </div>
+    <div>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="custom-spacing" size="6">
+            <ion-card
+              class="custom-card"
+              [ngClass]="'custom-card ' + ubitsClass"
+              (click)="selectApp('ubits')"
+            >
+            </ion-card>
+          </ion-col>
+          <ion-col size="6">
+            <ion-card
+              class="custom-card uakika-image"
+              (click)="selectApp('uakika')"
+            >
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <ion-card
+              class="custom-card factorh-image"
+              (click)="selectApp('factorh')"
+            >
+            </ion-card>
+          </ion-col>
+          <ion-col size="6">
+            <ion-card
+              class="custom-card hrider-image"
+              (click)="selectApp('hrider')"
+            >
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>
+<ion-footer class="footer mt-15" collapse="">
+  <ion-toolbar>
+    <p>
+      Ⓒ Integro 2022 | Desarrollado por
+      <a style="color: #c5312f" href="http://www.abacusall.com/"
+        >Soludinamic
+      </a>
+    </p>
+  </ion-toolbar>
+</ion-footer>

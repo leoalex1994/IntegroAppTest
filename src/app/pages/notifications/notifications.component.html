@@ -1,0 +1,34 @@
+<ion-header no-border class="bar-header" [translucent]="true" class="grey">
+  <ion-toolbar  style="text-align:center ;"  color="primary">
+    <ion-title  *ngIf="!showForm"> Area de notificaciones </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="background-image mb-15 pb-5" [fullscreen]="true">
+  <ion-fab [routerLink]="'/home'" vertical="top" horizontal="first" edge slot="fixed">
+    <ion-fab-button color="secondary">
+      <ion-icon name="arrow-back-circle-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <div class="custom-image">
+    <div class="greeting">
+    </div>
+    <div>
+      <ion-list>
+        <ion-item  (click)="selectApp('factorh')" *ngFor="let notificacion of notifyArray;" style="margin:10px ;" color="danger" >
+          <ion-icon name="mail" slot="start"></ion-icon>
+          <ion-label>
+            <!--<h3>{{notificacion.usuario_origen}}</h3>
+              <p>
+                {{notificacion.descripcion}}
+              </p>-->
+              <h3>Usuario Origen (Leonel)</h3>
+              <p>
+                Descripcion (Leonel)
+              </p>
+          </ion-label>    
+        </ion-item>
+
+      </ion-list>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,103 @@
+#container {
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 0%;
+  height: 100%;
+  width: 100%;
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+.color {
+  height: 100%;
+  background-color: rgb(225, 226, 228);
+}
+.grey {
+  background-color: rgb(141, 140, 142);
+}
+
+.footer {
+  top: 0px;
+  padding: 0;
+  height: 30px;
+  font-style: oblique;
+  font-size: 12px;
+  text-align: center;
+  background-color: #c5312f;
+  vertical-align: top;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.image-star {
+  height: 40%;
+  width: 100%;
+  background: url("/assets/images/app-pngArtboard8.png") no-repeat fixed center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+.image-login {
+  position: relative;
+  top: -10%;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  height: 70%;
+  width: 100%;
+  background: url("/assets/images/app-pngArtboard11.png") no-repeat fixed center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+.image-logo {
+  padding: 50px;
+  max-width: 80%;
+}
+
+.custom-input {
+  border: solid white 2px;
+  max-height: 56px;
+  background: transparent;
+  background-color: transparent;
+  font-weight: 900;
+  border-radius: 20px;
+}
+
+.input-container {
+  padding-bottom: 12px;
+}
+
+ion-button {
+  height: 56px;
+  font-size: medium;
+  text-transform: capitalize;
+  --border-radius: 25px;
+}
+ion-label {
+  color: white;
+}
+
+.form-box {
+  margin: 0 64px 10px 64px;
+}
+
+:host {
+  native-input {
+    --ion-item-color: black;
+  }
+}

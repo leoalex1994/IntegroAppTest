@@ -1,0 +1,51 @@
+<ion-content class="color">
+  <div [id]="'container'" class="color">
+    <div class="image-star"></div>
+    <div class="image-login">
+      <img class="image-logo" [src]="'assets/images/app-pngArtboard9.png'" />
+      <form #form="ngForm" (submit)="login(form.value)">
+        <div class="form-box">
+          <div class="input-container">
+            <ion-item class="custom-input" lines="full">
+              <ion-label color="white" position="floating">Correo</ion-label>
+              <ion-input
+                type="text"
+                required
+                name="email"
+                ngModel
+                autofocus
+              ></ion-input>
+            </ion-item>
+          </div>
+          <div class="input-container">
+            <ion-item class="custom-input" lines="full">
+              <ion-label color="white" position="floating"
+                >Contraseña</ion-label
+              >
+              <ion-input
+                type="password"
+                required
+                name="password"
+                ngModel
+              ></ion-input>
+            </ion-item>
+          </div>
+          <ion-button
+            class="custom-button"
+            type="submit"
+            color="danger"
+            expand="block"
+            >Iniciar sesión</ion-button
+          >
+          <ion-button
+            expand="full"
+            fill="clear"
+            color="secondary"
+            [routerLink]="['/recover-password']"
+            >Olvide mi contraseña</ion-button
+          >
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>
