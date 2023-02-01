@@ -1,0 +1,7 @@
+{
+  "name": "APP-INTEGRO",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
