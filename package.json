@@ -1,8 +1,8 @@
 {
   "name": "APP-INTEGRO",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://leoalex1994.github.io/IntegroAppTest/",
+  "version": "1.0.0",
+  "author": "Leonel Recinos",
+  "homepage": "https://leoalex1994.github.io/IntegroAppTest",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
